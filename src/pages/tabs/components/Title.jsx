@@ -37,7 +37,7 @@ const Title = ({
     <span
       className={`${
         isChanging ? "animate-out" : "animate-in"
-      } animation-fill-both opacity-0 text-neutral-200 text-7xl h-20 font-bold max-md:text-center`}
+      } animation-fill-both opacity-0 text-neutral-200 text-7xl h-20 font-bold max-md:text-center max-md:text-6xl max-md:h-16`}
     >
       {displayText}
     </span>

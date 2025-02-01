@@ -6,6 +6,7 @@ import PannelHeader from "./components/PannelHeader";
 import PannelContent from "./components/PannelContent";
 import Project from "./components/Project";
 import Skill from "./components/Skill";
+import Footer from "./components/Footer";
 
 export default function Professional({ isChanging }) {
   const [projectTab, setProjectTab] = useState(0);
@@ -108,6 +109,7 @@ export default function Professional({ isChanging }) {
           <Project name='Projects not added yet' description='Stay tuned!' />
         </div>
       </Section>
+      <Footer />
     </div>
   );
 }

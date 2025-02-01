@@ -4,6 +4,7 @@ import Section from "./components/Section";
 import Pannel from "./components/Pannel";
 import PannelContent from "./components/PannelContent";
 import PannelHeader from "./components/PannelHeader";
+import Footer from "./components/Footer";
 
 export default function Personal({ isChanging }) {
   const sequence = ["FLAMALITY", "REMI"];
@@ -48,6 +49,7 @@ export default function Personal({ isChanging }) {
           </PannelContent>
         </Pannel>
       </Section>
+      <Footer />
     </div>
   );
 }
