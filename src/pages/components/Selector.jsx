@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Selector({ tab, setTab }) {
   return (
-    <div className="absolute top-5 left-1/2 -translate-x-1/2 h-10 rounded">
+    <div className='z-50 absolute top-5 left-1/2 -translate-x-1/2 h-10 rounded'>
       {/*w-52*/}
-      <div className="relative flex-row flex justify-evenly items-center h-full w-full text-center">
+      <div className='relative flex-row flex justify-evenly items-center h-full w-full text-center'>
         <div
           className={`absolute top-1/2 -translate-y-1/2 h-8 z-10 rounded-full duration-500 transition-all shadow-xl
             ${

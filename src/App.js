@@ -5,11 +5,11 @@ import ComingSoon from "./pages/ComingSoon";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path="/HomeTest" element={<Home />} />
-          <Route path="*" element={<ComingSoon />} />
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<ComingSoon />} />
         </Routes>
       </BrowserRouter>
     </div>

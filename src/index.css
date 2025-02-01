@@ -7,6 +7,7 @@
     animation-fill-mode: both;
   }
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -19,4 +20,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  --s: 88px; /* control the size*/
+  --c1: #18181b;
+  --c2: #131315;
+
+  background: linear-gradient(135deg, #0000 18.75%, var(--c1) 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, var(--c1) -6.25% 6.25%, var(--c2) 0 18.75%);
+  background-size: var(--s) var(--s);
 }

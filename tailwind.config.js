@@ -6,6 +6,7 @@ module.exports = {
       animation: {
         in: "in 0.2s ease-in-out",
         out: "out 0.2s ease-in-out",
+        arrow: "arrow 2s ease-in-out infinite",
       },
       keyframes: {
         in: {
@@ -15,6 +16,11 @@ module.exports = {
         out: {
           "0%": { opacity: 1, transform: "translateY(0)" },
           "100%": { opacity: 0, transform: "translateY(-50%)" },
+        },
+        arrow: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
     },

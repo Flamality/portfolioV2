@@ -16,10 +16,10 @@ export default function Home() {
     setTimeout(() => {
       setTab(changeTab);
       setIsChanging(false);
-    }, 1000);
+    }, 500);
   };
   return (
-    <div className="relative w-full min-h-screen bg-zinc-900">
+    <div className='relative w-full min-h-screen bg-primary '>
       <Selector tab={displayTab} setTab={handleTabChange} />
       {tab ? (
         <Personal isChanging={isChanging} />
