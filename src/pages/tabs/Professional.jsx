@@ -7,6 +7,9 @@ import PannelContent from "./components/PannelContent";
 import Project from "./components/Project";
 import Skill from "./components/Skill";
 import Footer from "./components/Footer";
+import Seperator from "./components/Seperator";
+import SubContent from "./components/SubContent";
+import ContactForm from "./components/ContactForm";
 
 export default function Professional({ isChanging }) {
   const [projectTab, setProjectTab] = useState(0);
@@ -68,36 +71,79 @@ export default function Professional({ isChanging }) {
             experience working with real-time databases, authentication systems,
             and creating smooth UI/UX experiences. I'm always looking to improve
             my skills and take on new challenges!
+            <Seperator />
+            <div className='flex flex-row justify-center gap-2 flex-wrap'>
+              <SubContent icon={require("../../images/location.png")}>
+                Mentor, Ohio, USA
+              </SubContent>
+              <SubContent icon={require("../../images/education.png")}>
+                High School Sophomore
+              </SubContent>
+            </div>
           </PannelContent>
         </Pannel>
         <Pannel>
           <PannelHeader>Skills</PannelHeader>
           <PannelContent>
-            <Skill
-              icon={require("../../images/react.png")}
-              skill='React'
-              color='#61dbfb'
-            />
-            <Skill
-              icon={require("../../images/tailwind.png")}
-              skill='Tailwindcss'
-              color='#06b6d4'
-            />
-            <Skill
-              icon={require("../../images/js.png")}
-              skill='JavaScript'
-              color='#ffd708'
-            />
-            <Skill
-              icon={require("../../images/css.png")}
-              skill='CSS'
-              color='#264de4'
-            />
-            <Skill
-              icon={require("../../images/blank.png")}
-              skill='Please note: More skills still need to be added'
-              color='#ffffff'
-            />
+            <p className='text-neutral-400 font-semibold'>Front-End</p>
+            <div className='flex flex-row gap-2 flex-wrap'>
+              <Skill
+                icon={require("../../images/react.png")}
+                skill='React'
+                color='#00d8ff'
+              />
+              <Skill
+                icon={require("../../images/tailwind.png")}
+                skill='Tailwindcss'
+                color='#06b6d4'
+              />
+              <Skill
+                icon={require("../../images/js.png")}
+                skill='JavaScript'
+                color='#ffd708'
+              />
+              <Skill
+                icon={require("../../images/css.png")}
+                skill='CSS'
+                color='#264de4'
+              />
+            </div>
+            <p className='text-neutral-400 font-semibold mt-2'>Back-End</p>
+            <div className='flex flex-row gap-2 flex-wrap'>
+              <Skill
+                icon={require("../../images/appwrite.png")}
+                skill='Appwrite'
+                color='#fd366e'
+              />
+              <Skill
+                icon={require("../../images/firebase.png")}
+                skill='Firebase'
+                color='#ff9100'
+              />
+              <Skill
+                icon={require("../../images/node.png")}
+                skill='Node.js'
+                color='#52b255'
+              />
+            </div>
+            <p className='text-neutral-400 font-semibold mt-2'>Tools</p>
+            <div className='flex flex-row gap-2 flex-wrap'>
+              <Skill
+                icon={require("../../images/trello.png")}
+                skill='Trello'
+                color='#518fe1'
+              />
+              <Skill
+                icon={require("../../images/git.png")}
+                skill='Git'
+                color='#f05030'
+              />
+              <Skill
+                icon={require("../../images/github.png")}
+                skill='Github'
+                color='#999999'
+              />
+            </div>
           </PannelContent>
         </Pannel>
       </Section>
@@ -105,10 +151,25 @@ export default function Professional({ isChanging }) {
         PROJECTS
       </p>
       <Section>
-        <div className='flex flex-row gap-8 justify-evenly flex-wrap'>
+        <div className='flex flex-row gap-8 justify-center flex-wrap'>
           <Project name='Projects not added yet' description='Stay tuned!' />
+          <Project
+            name='Wanna be here?'
+            description='Contact me and your project I work on could be here!'
+          />
         </div>
       </Section>
+      <p
+        className='font-black py-4 text-[6em] tracking-[3.4vw] 
+   max-xl:tracking-[1.1vw] max-lg:text-7xl max-lg:tracking-[2.25vw] max-md:text-6xl 
+   bg-gradient-to-r from-violet-950 via-violet-800 to-violet-950
+   text-neutral-900/90 w-[200vw] -translate-x-1/4 text-center rotate-3
+   shadow-2xl backdrop-blur-sm
+   transition-all duration-700 cursor-default hover:rotate-2'
+      >
+        CONTACT
+      </p>
+      <ContactForm />
       <Footer />
     </div>
   );
