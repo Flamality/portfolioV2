@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Title from "./components/Title";
 import Section from "./components/Section";
 import Pannel from "./components/Pannel";
@@ -13,10 +13,30 @@ import ContactForm from "./components/ContactForm";
 
 export default function Professional({ isChanging }) {
   const [projectTab, setProjectTab] = useState(0);
+  const [myTime, setMyTime] = useState("0:00:00 AM");
   const sequence = ["FLAMALITY", "REMI"];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      let date = new Date();
+      let timezoneOffset = date.getTimezoneOffset();
+      let estOffset = -300;
+      let adjustedTime = new Date(
+        date.getTime() + (estOffset + timezoneOffset) * 60 * 1000
+      );
+      let options = {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZone: "America/New_York",
+      };
+      let estTime = adjustedTime.toLocaleTimeString("en-US", options);
+      setMyTime(estTime);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className='professional'>
-      <div className='min-h-screen flex flex-col pt-16'>
+      <div className='min-h-screen overflow-x-hidden w-screen flex flex-col pt-16'>
         <div className='flex-grow flex flex-row max-md:flex-col justify-evenly max-md:justify-center items-center gap-16'>
           <div className='w-72 max-md:w-full flex flex-col'>
             <Title sequence={sequence} isChanging={isChanging} />
@@ -78,6 +98,9 @@ export default function Professional({ isChanging }) {
               </SubContent>
               <SubContent icon={require("../../images/education.png")}>
                 High School Sophomore
+              </SubContent>
+              <SubContent icon={require("../../images/time.png")}>
+                {myTime} EST
               </SubContent>
             </div>
           </PannelContent>
