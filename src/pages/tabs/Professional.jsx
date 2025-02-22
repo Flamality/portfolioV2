@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Seperator from "./components/Seperator";
 import SubContent from "./components/SubContent";
 import ContactForm from "./components/ContactForm";
+import Certificate from "./components/Certificate";
 
 export default function Professional({ isChanging }) {
   const [projectTab, setProjectTab] = useState(0);
@@ -36,8 +37,10 @@ export default function Professional({ isChanging }) {
   }, []);
   return (
     <div className='professional'>
-      <div className='min-h-screen overflow-x-hidden w-screen flex flex-col pt-16'>
-        <div className='flex-grow flex flex-row max-md:flex-col justify-evenly max-md:justify-center items-center gap-16'>
+      <div
+        className={` min-h-screen overflow-x-hidden w-screen flex flex-col pt-16 bg-gradient-to-br relative `}
+      >
+        <div className='flex-grow flex flex-row max-md:flex-col justify-evenly max-md:justify-center items-center gap-16 '>
           <div className='w-72 max-md:w-full flex flex-col'>
             <Title sequence={sequence} isChanging={isChanging} />
             <p
@@ -45,31 +48,30 @@ export default function Professional({ isChanging }) {
                 isChanging ? "animate-out" : "animate-in"
               } animation-fill-both opacity-0 text-neutral-400 w-full text-2xl max-md:text-center animation-delay-100`}
             >
-              Front-End Web Developer
+              Web Developer
             </p>
           </div>
-          <div className='flex items-center justify-center relative'>
-            <img
-              src={require("../../images/react.png")}
-              className={`w-24 opacity-0 animation-fill-both animation-delay-200 ${
-                isChanging ? "animate-out" : "animate-in"
-              }`}
-            />
-            <p
+          <div className='h-[70vh] w-1/4 max-md:h-[20vh] max-md:w-4/5 flex justify-end'>
+            <div
               className={`${
-                isChanging ? "animate-out" : "animate-in"
-              } animation-fill-both opacity-0 animation-delay-300 mx-6 text-5xl text-neutral-500 cursor-default select-none`}
-            >
-              +
-            </p>
-            <img
-              src={require("../../images/tailwind.png")}
-              className={`w-24 opacity-0 animation-fill-both animation-delay-400 ${
-                isChanging ? "animate-out" : "animate-in"
-              }`}
+                isChanging ? "animate-growOut" : "animate-growIn"
+              } animation-fill-both w-full opacity-0 diag h-full rounded-lg animation-delay-100`}
             />
           </div>
         </div>
+        <div class='custom-shape-divider-bottom-1740183064'>
+          <svg
+            data-name='Layer 1'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 1200 120'
+            preserveAspectRatio='none'
+          >
+            <path
+              d='M1200 120L0 16.48 0 0 1200 0 1200 120z'
+              class='shape-fill'
+            ></path>
+          </svg>
+        </div>{" "}
         <div
           className={`${
             isChanging ? "animate-out" : "animate-in"
@@ -77,7 +79,7 @@ export default function Professional({ isChanging }) {
         >
           <img
             src={require("../../images/arrow.png")}
-            className='w-16 animate-arrow'
+            className='w-16 animate-arrow z-20'
           />
         </div>
       </div>
@@ -91,6 +93,16 @@ export default function Professional({ isChanging }) {
             experience working with real-time databases, authentication systems,
             and creating smooth UI/UX experiences. I'm always looking to improve
             my skills and take on new challenges!
+          </PannelContent>
+          <div className='mt-3' />
+          <PannelHeader>Background</PannelHeader>
+          <PannelContent>
+            I have always been interested in computer science since the age of
+            8, starting with scratch. Now I am working with languages like
+            JavaScript to built complex web apps. As well as enrolling in many
+            computer science classes, including enrolling in the Programming &
+            Software Development Academy in the 2025-2026 and 2026-2027 school
+            year.
             <Seperator />
             <div className='flex flex-row justify-center gap-2 flex-wrap'>
               <SubContent icon={require("../../images/location.png")}>
@@ -169,13 +181,48 @@ export default function Professional({ isChanging }) {
             </div>
           </PannelContent>
         </Pannel>
+        <Pannel>
+          <PannelHeader>Certificates</PannelHeader>
+          <PannelContent>
+            <div className='flex flex-col gap-2 flex-wrap'>
+              <Certificate
+                by='Sololearn'
+                earned='2/12/25'
+                image={require("../../images/webdevelopmentcertificate.png")}
+                name='Web Development'
+                link='https://www.sololearn.com/certificates/CC-DVZJPKRT'
+              />
+            </div>
+          </PannelContent>
+        </Pannel>
       </Section>
-      <p className='font-bold py-2 text-[8em] tracking-[3.4vw] max-xl:tracking-[1.1vw] max-lg:text-9xl max-lg:tracking-[2.25vw] max-md:text-6xl mix-blend-difference bg-neutral-950 w-full text-center'>
+      <div className='relative'>
+        <div class='custom-shape-divider-bottom-1740183970'>
+          <svg
+            data-name='Layer 1'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 1200 120'
+            preserveAspectRatio='none'
+          >
+            <path
+              d='M649.97 0L550.03 0 599.91 54.12 649.97 0z'
+              class='shape-fill'
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <p className='font-extrabold text-zinc-900 py-2 text-[8em] tracking-[3.4vw] max-xl:tracking-[1.1vw] max-lg:text-9xl max-lg:tracking-[2.25vw] max-md:text-6xl bg-zinc-950 w-full text-center'>
         PROJECTS
       </p>
       <Section>
         <div className='flex flex-row gap-8 justify-center flex-wrap'>
-          <Project name='Projects not added yet' description='Stay tuned!' />
+          <Project
+            name='Adrionic.xyz'
+            description='A personal website for the content creator "Adrionic"'
+            link='https://adrionic.xyz'
+            linkText='View website'
+            image={require("../../images/adrionicxyzshot1.png")}
+          />
           <Project
             name='Wanna be here?'
             description='Contact me and your project I work on could be here!'
@@ -185,7 +232,7 @@ export default function Professional({ isChanging }) {
       <p
         className='font-black py-4 text-[6em] tracking-[3.4vw] 
    max-xl:tracking-[1.1vw] max-lg:text-7xl max-lg:tracking-[2.25vw] max-md:text-6xl 
-   bg-gradient-to-r from-violet-950 via-violet-800 to-violet-950
+   bg-gradient-to-r from-violet-500 via-violet-800 to-violet-500
    text-neutral-900/90 w-[200vw] -translate-x-1/4 text-center rotate-3
    shadow-2xl backdrop-blur-sm
    transition-all duration-700 cursor-default hover:rotate-2'

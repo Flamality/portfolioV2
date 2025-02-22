@@ -5,7 +5,11 @@ export default function Skill({ icon, skill, color }) {
       style={{ backgroundColor: `${color}30`, borderColor: `${color}45` }}
     >
       <div className='p-1 rounded' style={{ backgroundColor: `${color}45` }}>
-        <img src={icon} className='text-white h-5 w-5 object-contain' />
+        <img
+          src={icon}
+          alt={skill + " Icon"}
+          className='text-white h-5 w-5 object-contain'
+        />
       </div>
       <p
         className='text-neutral-300 truncate mx-1 font-semibold'

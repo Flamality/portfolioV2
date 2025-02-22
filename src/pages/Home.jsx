@@ -19,7 +19,7 @@ export default function Home() {
     }, 500);
   };
   return (
-    <div className='relative w-full min-h-screen bg-primary '>
+    <div className='relative w-full min-h-screen bg-zinc-900 '>
       <Selector tab={displayTab} setTab={handleTabChange} />
       {tab ? (
         <Personal isChanging={isChanging} />

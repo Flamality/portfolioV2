@@ -28,13 +28,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.custom-shape-divider-bottom-1740183064 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
-html {
-  --s: 88px; /* control the size*/
-  --c1: #18181b;
-  --c2: #131315;
+.custom-shape-divider-bottom-1740183064 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 10%;
+}
 
-  background: linear-gradient(135deg, #0000 18.75%, var(--c1) 0 31.25%, #0000 0),
-    repeating-linear-gradient(45deg, var(--c1) -6.25% 6.25%, var(--c2) 0 18.75%);
-  background-size: var(--s) var(--s);
+.custom-shape-divider-bottom-1740183064 .shape-fill {
+  fill: #18181b;
+}
+.custom-shape-divider-bottom-1740183970 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1740183970 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 5%;
+}
+
+.custom-shape-divider-bottom-1740183970 .shape-fill {
+  fill: #09090b;
+}
+
+.diag {
+  background-color: #18181b;
+  background: repeating-linear-gradient(
+    -45deg,
+    #a3a3a3,
+    #a3a3a3 8px,
+    #18181b 8px,
+    #18181b 40px
+  );
 }
