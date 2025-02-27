@@ -59,7 +59,7 @@ export default function Professional({ isChanging }) {
             />
           </div>
         </div>
-        <div class='custom-shape-divider-bottom-1740183064'>
+        <div className='custom-shape-divider-bottom-1740183064'>
           <svg
             data-name='Layer 1'
             xmlns='http://www.w3.org/2000/svg'
@@ -68,7 +68,7 @@ export default function Professional({ isChanging }) {
           >
             <path
               d='M1200 120L0 16.48 0 0 1200 0 1200 120z'
-              class='shape-fill'
+              className='shape-fill'
             ></path>
           </svg>
         </div>{" "}
@@ -101,7 +101,7 @@ export default function Professional({ isChanging }) {
             8, starting with scratch. Now I am working with languages like
             JavaScript to built complex web apps. As well as enrolling in many
             computer science classes, including enrolling in the Programming &
-            Software Development Academy in the 2025-2026 and 2026-2027 school
+            Software Development Academy in the 2025-2026 and 2026-2027% school
             year.
             <Seperator />
             <div className='flex flex-row justify-center gap-2 flex-wrap'>
@@ -197,7 +197,7 @@ export default function Professional({ isChanging }) {
         </Pannel>
       </Section>
       <div className='relative'>
-        <div class='custom-shape-divider-bottom-1740183970'>
+        <div className='custom-shape-divider-bottom-1740183970'>
           <svg
             data-name='Layer 1'
             xmlns='http://www.w3.org/2000/svg'
@@ -206,7 +206,7 @@ export default function Professional({ isChanging }) {
           >
             <path
               d='M649.97 0L550.03 0 599.91 54.12 649.97 0z'
-              class='shape-fill'
+              className='shape-fill'
             ></path>
           </svg>
         </div>
