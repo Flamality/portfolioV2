@@ -8,7 +8,7 @@ export default function Certificate({ name, image, earned, by, link }) {
         <div className='ml-6'>
           <p className='text-neutral-200 text-lg font-bold'>{name}</p>
           <p className='text-neutral-400 mb-6'>{by}</p>
-          <p className='text-neutral-300 font-semibold'>Rewarded: {earned}</p>
+          <p className='text-neutral-300 font-semibold'>Issued {earned}</p>
         </div>
       </div>
     </a>

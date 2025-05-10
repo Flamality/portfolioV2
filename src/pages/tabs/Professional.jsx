@@ -20,7 +20,7 @@ export default function Professional({ isChanging }) {
     const timer = setInterval(() => {
       let date = new Date();
       let timezoneOffset = date.getTimezoneOffset();
-      let estOffset = -300;
+      let estOffset = -240;
       let adjustedTime = new Date(
         date.getTime() + (estOffset + timezoneOffset) * 60 * 1000
       );
@@ -88,21 +88,11 @@ export default function Professional({ isChanging }) {
           <PannelHeader>Introduction</PannelHeader>
           <PannelContent>
             Hello! My name is Remi 👋! I am a web developer with expertise in
-            React, especially when paired with Tailwind CSS. I specialize in
-            building modern, responsive, and user-friendly applications. I have
-            experience working with real-time databases, authentication systems,
-            and creating smooth UI/UX experiences. I'm always looking to improve
-            my skills and take on new challenges!
-          </PannelContent>
-          <div className='mt-3' />
-          <PannelHeader>Background</PannelHeader>
-          <PannelContent>
-            I have always been interested in computer science since the age of
-            8, starting with scratch. Now I am working with languages like
-            JavaScript to built complex web apps. As well as enrolling in many
-            computer science classes, including enrolling in the Programming &
-            Software Development Academy in the 2025-2026 and 2026-2027% school
-            year.
+            React. I specialize in building modern, responsive, and
+            user-friendly applications. I have experience working with real-time
+            databases, authentication systems, and creating smooth UI/UX
+            experiences. I'm always looking to improve my skills and take on new
+            challenges!
             <Seperator />
             <div className='flex flex-row justify-center gap-2 flex-wrap'>
               <SubContent icon={require("../../images/location.png")}>
@@ -187,10 +177,24 @@ export default function Professional({ isChanging }) {
             <div className='flex flex-col gap-2 flex-wrap'>
               <Certificate
                 by='Sololearn'
-                earned='2/12/25'
+                earned='Feb 12, 2025'
                 image={require("../../images/webdevelopmentcertificate.png")}
                 name='Web Development'
                 link='https://www.sololearn.com/certificates/CC-DVZJPKRT'
+              />
+              <Certificate
+                by='Meta'
+                earned='Feb 27, 2025'
+                image={require("../../images/CourseraNKZL3IA81W66.png")}
+                name='Introduction to Front-end Development'
+                link='https://www.coursera.org/account/accomplishments/verify/NKZL3IA81W66'
+              />
+              <Certificate
+                by='Meta'
+                earned='May 8, 2025'
+                image={require("../../images/CourseraO9728K32QK2E.png")}
+                name='Programming with JavaScript'
+                link='https://www.coursera.org/account/accomplishments/verify/O9728K32QK2E'
               />
             </div>
           </PannelContent>
@@ -224,8 +228,24 @@ export default function Professional({ isChanging }) {
             image={require("../../images/adrionicxyzshot1.png")}
           />
           <Project
+            name={`Flam's Color Picker`}
+            description='A very basic color picker made using React and React Color.'
+            link='https://colors.flamality.com'
+            linkText='View website'
+            image={require("../../images/colorsflamality.png")}
+          />
+          <Project
+            name='SaturnWave'
+            description='A all-in-one Discord bot meant from counting to moderation *In development*'
+            link='https://github.com/Flamality/SaturnWave'
+            linkText='View repo'
+            image={require("../../images/saturnwave.jpg")}
+          />
+          <Project
             name='Wanna be here?'
             description='Contact me and your project I work on could be here!'
+            link='mailto:contact@flamality.com'
+            linkText='Email me'
           />
         </div>
       </Section>
