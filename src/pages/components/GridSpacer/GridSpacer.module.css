@@ -1,0 +1,19 @@
+.grid {
+    background:
+        repeating-linear-gradient(0deg,
+            var(--border-color) 0,
+            var(--border-color) 1px,
+            transparent 1px,
+            transparent 60px),
+        repeating-linear-gradient(90deg,
+            var(--border-color) 0,
+            var(--border-color) 1px,
+            transparent 1px,
+            transparent 60px);
+    height: 34rem;
+    width: 100%;
+    margin-top: -22rem;
+    margin-bottom: -12rem;
+    box-shadow: inset var(--bg-main) 0 0 80px 160px;
+    z-index: -1;
+}

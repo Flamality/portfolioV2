@@ -1,0 +1,14 @@
+.certificate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    justify-self: stretch;
+
+    &:hover {
+        background-color: var(--border-color);
+    }
+}

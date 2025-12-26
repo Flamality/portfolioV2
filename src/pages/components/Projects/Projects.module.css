@@ -1,0 +1,18 @@
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 12vw;
+    letter-spacing: 4vw;
+    font-family: var(--font-text);
+    font-weight: 700;
+    color: var(--border-color);
+    margin-bottom: -6vw;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
+}

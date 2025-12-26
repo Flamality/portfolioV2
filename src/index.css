@@ -8,6 +8,30 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Sirivennela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+:root {
+  --font-cursive: 'Sirivennela', sans-serif;
+  --font-title: 'Oswald', sans-serif;
+  --font-text: 'Google Sans', sans-serif;
+
+  --text-main: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  --bg-main: #09090b;
+
+  --border-color: #222;
+  --border: 2px solid var(--border-color);
+
+  --primary: #d874a6;
+  --primary-dark: #cd4c8c;
+
+  --secondary: #62a6ea;
+  --secondary-dark: #558cc3;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -28,54 +52,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.custom-shape-divider-bottom-1740183064 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
 
-.custom-shape-divider-bottom-1740183064 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 10%;
-}
-
-.custom-shape-divider-bottom-1740183064 .shape-fill {
-  fill: #18181b;
-}
-.custom-shape-divider-bottom-1740183970 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1740183970 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 5%;
-}
-
-.custom-shape-divider-bottom-1740183970 .shape-fill {
-  fill: #09090b;
+p,
+a,
+span,
+li {
+  font-family: var(--font-text);
 }
 
 .diag {
-  background-color: #18181b;
-  background: repeating-linear-gradient(
-    -45deg,
-    #a3a3a3,
-    #a3a3a3 8px,
-    #18181b 8px,
-    #18181b 40px
-  );
+  background-color: transparent;
+  background: repeating-linear-gradient(-45deg,
+      #a3a3a3,
+      #a3a3a3 8px,
+      transparent 8px,
+      transparent 40px);
 }

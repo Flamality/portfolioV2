@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import ComingSoon from "./pages/ComingSoon";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='*' element={<ComingSoon />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
