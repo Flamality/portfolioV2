@@ -15,8 +15,12 @@
     border-radius: 0.5rem;
     padding: 2rem;
     max-width: 60vw;
+    width: 100%;
     background-color: var(--bg-main);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
 .section {
@@ -85,6 +89,37 @@
     }
 }
 
+.tabs {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    color: var(--text-main);
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+
+    p {
+        /* background-color: var(--border-color); */
+        color: var(--border-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: .25rem;
+        border: var(--border);
+        transition: .2s all ease;
+        cursor: pointer;
+
+        &.active {
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+        }
+
+        &:hover {
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+        }
+    }
+}
+
 /* ANIMATED ICON */
 
 .icon {
@@ -93,6 +128,7 @@
     width: calc(var(--image-size) * var(--image-expand));
     height: calc(var(--image-size) * var(--image-expand));
     position: relative;
+    align-self: flex-start;
 }
 
 .icon_accent {
@@ -159,6 +195,7 @@
 
     .icon {
         --image-size: 45vw;
+        align-self: center;
     }
 
     .info {

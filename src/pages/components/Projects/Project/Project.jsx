@@ -6,6 +6,7 @@ export default function Project({ title, image, desc, url, link, type }) {
   return (
     <div className={styles.container}>
       <img src={image} className={styles.image} />
+      <div className={styles.imageOverlay} />
       <div className={styles.type}>
         <p>{type?.charAt(0).toUpperCase() + type?.slice(1)}</p>
       </div>

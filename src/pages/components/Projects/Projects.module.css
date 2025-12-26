@@ -1,3 +1,7 @@
+.container {
+    margin-top: 12rem;
+}
+
 .title {
     width: 100%;
     text-align: center;
@@ -15,4 +19,12 @@
     gap: 2rem;
     flex-wrap: wrap;
     margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 526px) {
+    .title {
+        font-size: 17vw;
+        letter-spacing: 1vw;
+        color: var(--text-secondary);
+    }
 }

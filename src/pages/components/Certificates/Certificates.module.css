@@ -1,5 +1,5 @@
 .container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -7,19 +7,48 @@
     padding: 1.5rem;
     border: var(--border);
     border-radius: 0.5rem;
+    width: 100%; */
+
+    /* border: var(--border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 60vw;
+    background-color: var(--bg-main);
+    position: relative; */
+
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .title {
     font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    color: var(--primary-dark);
+    font-weight: 600;
 }
 
 .certificates {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 0.5rem;
-    align-items: stretch;
+    align-items: stretch; */
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 526px) {
+    .certificates {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        border: none;
+        margin: 0;
+    }
 }

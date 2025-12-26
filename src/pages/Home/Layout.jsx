@@ -13,7 +13,7 @@ export default function Layout() {
       <Hero />
       <GridSpacer />
       <Info />
-      <Certificates />
+      {/* <Certificates /> */}
       <Projects />
       <p
         className='font-black py-4 text-[6em] tracking-[3.4vw] 
