@@ -6,7 +6,9 @@ import Project from "./Project/Project";
 export default function Projects() {
   return (
     <div className={styles.container}>
-      <p className={styles.title}>PROJECTS</p>
+      <p className={styles.title}>
+        PROJECT<span>S</span>
+      </p>
       <div className={styles.projects}>
         <Project
           type='client'
@@ -15,6 +17,7 @@ export default function Projects() {
           image={require("../../../images/adrionicxyzshot1.png")}
           link='View Website'
           url='https://adrionic.xyz'
+          i={1}
         />
         <Project
           type='extracurricular'
@@ -23,6 +26,7 @@ export default function Projects() {
           image={require("../../../images/mhsprideclub.png")}
           link='View Website'
           url='https://mhspride.club'
+          i={2}
         />
         <Project
           type='personal'
@@ -31,6 +35,7 @@ export default function Projects() {
           image={require("../../../images/portfolio.png")}
           link="You're already here silly!"
           url='/'
+          i={3}
         />
         <Project
           type='personal'
@@ -39,6 +44,7 @@ export default function Projects() {
           image={require("../../../images/flamalitycom.png")}
           link='View Website'
           url='https://flamality.com'
+          i={4}
         />
         <Project
           type='hmmm... seems a little empty'
@@ -46,6 +52,7 @@ export default function Projects() {
           desc='Contact me and your project I work on could be here!'
           link='Email me'
           url='mailto:remi@flamality.com'
+          i={5}
         />
       </div>
     </div>

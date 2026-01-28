@@ -74,12 +74,14 @@
     gap: 0.5rem;
     font-size: 1.8rem;
 
+
     a {
         /* background-color: var(--border-color); */
-        color: var(--border-color);
+        color: var(--text-muted);
         padding: 0.2rem;
         border-radius: .25rem;
-        border: var(--border);
+        border: 2px solid var(--text-muted);
+        ;
         transition: .2s all ease;
 
         &:hover {
@@ -99,12 +101,17 @@
     gap: 0.5rem;
     font-size: 1rem;
 
+    /* background-color: var(--border-color); */
+    /* padding: 4px; */
+    /* border-radius: calc(.25rem + 4px); */
+
     p {
-        /* background-color: var(--border-color); */
-        color: var(--border-color);
-        padding: 0.2rem 0.4rem;
-        border-radius: .25rem;
-        border: var(--border);
+        color: var(--text-muted);
+        background-color: var(--bg-main);
+        padding: 0.2rem 0.8rem;
+        /* border-radius: .25rem; */
+        border-radius: 999px;
+        border: 2px solid var(--text-muted);
         transition: .2s all ease;
         cursor: pointer;
 
@@ -141,6 +148,18 @@
     background-color: transparent;
     border: 4px solid var(--primary-dark);
     animation: rotate 18s linear infinite;
+}
+
+.icon_accent::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border: 4px solid var(--text-main);
+    animation: rotate 10s linear reverse infinite;
 }
 
 .icon_image {

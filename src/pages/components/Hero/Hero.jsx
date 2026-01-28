@@ -7,10 +7,10 @@ export default function HeroTest() {
     <div className={styles.container}>
       <div className={styles.shadow} />
       <div className={styles.hero}>
-        <p className={styles.name}>FLAMALITY</p>
-        <p className={styles.title}>
+        <p className={styles.title}>FLAMALITY</p>
+        <p className={styles.role}>
           Web Developer
-          <span>+ UI/UX Designer</span>
+          <div>+ UI/UX Designer</div>
         </p>
       </div>
     </div>

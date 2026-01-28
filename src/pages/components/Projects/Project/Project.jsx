@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./Project.module.css";
+import { useInView } from "react-intersection-observer";
 
-export default function Project({ title, image, desc, url, link, type }) {
+export default function Project({ title, image, desc, url, link, type, i }) {
+  const [animate, setAnimate] = useState(false);
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+  });
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    }
+  }, [inView]);
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container + (animate ? ` ${styles.animate}` : "")}
+      style={{ "--i": i }}
+      ref={ref}
+    >
       <img src={image} className={styles.image} />
       <div className={styles.imageOverlay} />
       <div className={styles.type}>

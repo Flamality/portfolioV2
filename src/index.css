@@ -19,8 +19,10 @@
 
   --text-main: #e5e7eb;
   --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
 
   --bg-main: #09090b;
+
 
   --border-color: #222;
   --border: 2px solid var(--border-color);

@@ -16,6 +16,8 @@
     background: rgba(255, 0, 128, 0.25);
     z-index: 1;
     filter: blur(calc(var(--shadow-size) / 5));
+
+    animation: fade-in 2s ease-in-out forwards;
 }
 
 .hero {
@@ -28,19 +30,21 @@
     width: fit-content;
 }
 
-.name {
+.title {
     font-size: clamp(5rem, 17vw, 17vw);
     font-weight: 500;
     z-index: 2;
     background: linear-gradient(to bottom, white, transparent);
     background-clip: text;
     color: transparent;
-    line-height: 0.9;
+    line-height: 0.95;
     font-family: var(--font-title);
     transform: scaleY(1.2);
+    animation: title-in-animation 0.5s ease-in-out forwards;
+    clip-path: inset(0 100% 0 0);
 }
 
-.title {
+.role {
     z-index: 2;
     margin-top: 1rem;
     color: var(--primary-dark);
@@ -50,8 +54,12 @@
     font-weight: 500;
     margin-top: 0rem;
     font-family: var(--font-cursive);
+    animation: title-in-animation 0.75s ease-in-out forwards;
+    animation-delay: 0.25s;
+    clip-path: inset(0 100% 0 0);
 
-    span {
+    div {
+        display: inline-block;
         color: var(--text-main);
         font-family: var(--font-title);
         font-weight: 300;
@@ -61,5 +69,58 @@
         padding: 0 0.4rem;
         margin-left: 0.5rem;
         padding-bottom: 1px;
+        animation: badge-clip-in-animation 0.5s ease-in-out forwards;
+        animation-delay: 0.5s;
+        transform: translate(20px, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes title-in-animation {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    85% {
+        clip-path: inset(0 0% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0% 0 0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes badge-clip-in-animation {
+    0% {
+        transform: translate(20px, 20px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translate(20px, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(20px, 0);
+    }
+
+    90% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
     }
 }

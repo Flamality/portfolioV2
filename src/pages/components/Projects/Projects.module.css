@@ -11,6 +11,10 @@
     font-weight: 700;
     color: var(--border-color);
     margin-bottom: -6vw;
+
+    span {
+        letter-spacing: normal;
+    }
 }
 
 .projects {
