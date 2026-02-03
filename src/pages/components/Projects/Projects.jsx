@@ -34,7 +34,7 @@ export default function Projects() {
           desc='My portfolio'
           image={require("../../../images/portfolio.png")}
           link="You're already here silly!"
-          url='/'
+          url='https://portfolio.flamality.com'
           i={3}
         />
         <Project
